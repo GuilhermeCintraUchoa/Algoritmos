@@ -6,13 +6,13 @@ using namespace std;
 int main()
 {
 
-    vector<int> list = {1, 5, 7, 2, 3, 8};
+    vector<int> list = {0, 1, 1, 1, 2, 4, 6, 3};
 
-    for (int i = 0; i < list.size() - 2; i++)
+    for (int i = 0; i < list.size() - 1; i++)
     {
         int min = i;
 
-        for (int j = i + 1; j < list.size() - 1; j++)
+        for (int j = i + 1; j < list.size(); j++)
         {
             if (list[j] < list[min])
             {
