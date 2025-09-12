@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-void print_array_atual(int array[], int tamanho_da_array);
-
 int main(void) {
-  int A[] = {89, 45, 68, 90, 29, 34, 17};
+  int A[] = {89, 45, 89, 90, 29, 34, 17};
   int tamanho_lista = sizeof(A)/sizeof(A[0]);
+
+  printf("====================\n");
+  printf("LISTA INICIAL:\n");
   //quero que se o elemento da frente for maior que o presente, troque, e repita ate o fim do ciclo desse elemento
   for (int i = 0; i < tamanho_lista; i++){
     printf("%d ", A[i]);
@@ -20,22 +21,18 @@ int main(void) {
         A[j-1] = A[j];
         A[j] = tmp;
       }
-      for (int i = 0; i < tamanho_lista; i++){
-        if(A[i] == tmp){
-          printf("*");
-        }
-        printf("%d ", A[i]);
-      }
-      printf("\n");
     }
-
   }
 
+  printf("====================\n");
+  printf("LISTA ORDENADA:\n");
 
   for (int i = 0; i < tamanho_lista; i++){
-    printf("A[%d]: %d ", i, A[i]);
+    printf("%d ", A[i]);
   }
   printf("\n");
+
+  printf("====================\n");
 
   return 0;
 }
