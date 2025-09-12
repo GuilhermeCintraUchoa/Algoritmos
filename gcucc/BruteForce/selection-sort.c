@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main(void){
-  int A[] = {89, 45, 68, 90, 29, 34, 17};
+  int A[] = {-9, 45, 68, 90, 29, 34, 17};
 
-  int index_do_j;
   for (int i = 0; i < 6; i++){
     int min = A[i];
 
